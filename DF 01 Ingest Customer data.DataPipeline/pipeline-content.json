@@ -1,0 +1,82 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "ParquetSource",
+            "storeSettings": {
+              "type": "AzureBlobStorageReadSettings",
+              "recursive": false,
+              "wildcardFolderPath": "WideWorldImportersDW/parquet/full/dimension_customer",
+              "wildcardFileName": "*.parquet",
+              "enablePartitionDiscovery": false
+            },
+            "formatSettings": {
+              "type": "ParquetReadSettings"
+            },
+            "datasetSettings": {
+              "type": "Parquet",
+              "typeProperties": {
+                "location": {
+                  "type": "AzureBlobStorageLocation",
+                  "container": "sampledata"
+                },
+                "compressionCodec": "snappy"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "f0c1c8f0-798c-425a-8109-5891aea7af82"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "Append",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "dimension_customer"
+              },
+              "schema": [],
+              "linkedService": {
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "d389af84-d45e-47d2-a336-c8259181631c",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                },
+                "name": "wwilakehouse"
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy Customer Data",
+        "dependsOn": []
+      }
+    ],
+    "annotations": []
+  }
+}

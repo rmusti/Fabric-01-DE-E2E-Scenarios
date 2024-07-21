@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"19997ba56af7543033c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":290,\"y\":0,\"width\":945,\"height\":280,\"z\":1001,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(fact_sale.Quantity)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_sale\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Quantity\"}},\"Function\":0},\"Name\":\"Sum(fact_sale.Quantity)\",\"NativeReferenceName\":\"Sum of Quantity\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Quantity\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 945.00,
+          "x": 290.00,
+          "y": 0.00,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"1cd0eb6c1d0423cfcf24\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.063705445674874,\"y\":290.40978571804635,\"z\":1000,\"width\":1224.8967199592846,\"height\":419.8002843052947,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(fact_sale.Profit)\"}],\"Category\":[{\"queryRef\":\"dimension_employee.Employee\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_sale\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dimension_employee\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Profit\"}},\"Function\":0},\"Name\":\"Sum(fact_sale.Profit)\",\"NativeReferenceName\":\"Sum of Profit\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Employee\"},\"Name\":\"dimension_employee.Employee\",\"NativeReferenceName\":\"Employee\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Profit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 419.80,
+          "width": 1224.90,
+          "x": 10.06,
+          "y": 290.41,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"9ffc56e0e5affea6c666\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(fact_sale.Profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_sale\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Profit\"}},\"Function\":0},\"Name\":\"Sum(fact_sale.Profit)\",\"NativeReferenceName\":\"Sum of Profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Profit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

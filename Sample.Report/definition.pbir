@@ -1,0 +1,14 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": null,
+    "byConnection": {
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/01 DE E2E Scenario\";Initial Catalog=wwilakehouse;Integrated Security=ClaimsToken",
+      "pbiServiceModelId": null,
+      "pbiModelVirtualServerName": "sobe_wowvirtualserver",
+      "pbiModelDatabaseName": "ff6e4653-d54a-4a4b-ad90-f731be2fb32e",
+      "name": "EntityDataSource",
+      "connectionType": "pbiServiceXmlaStyleLive"
+    }
+  }
+}
